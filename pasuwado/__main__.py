@@ -1,5 +1,7 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
-from .lib import Pasuwado, Generator
+
+from .generator import Generator
+from .randomizer import Randomizer
 
 index_content: str
 styles_content: bytes
@@ -10,14 +12,14 @@ with open("pasuwado/index.html") as index_file:
 with open("pasuwado/styles.css") as styles_file:
     styles_content = styles_file.read().encode()
 
-generator = Generator(Pasuwado())
+generator = Generator(Randomizer())
 
 
 class RequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
 
-        content = index_content.replace("{a}", generator.generate(16)).encode()
+        content = index_content.replace("{password}", generator.generate(16)).encode()
 
         match self.path:
             case "/styles.css":
