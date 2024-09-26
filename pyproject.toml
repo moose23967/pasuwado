@@ -4,5 +4,7 @@ version = "0.1.0"
 description = "Add your description here"
 requires-python = ">=3.12"
 dependencies = [
+    "pybars3>=0.9.7",
+    "pybars4>=0.9.13",
     "qsharp>=1.8.0",
 ]

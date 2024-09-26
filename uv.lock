@@ -2,6 +2,47 @@ version = 1
 requires-python = ">=3.12"
 
 [[package]]
+name = "pasuwado"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "pybars3" },
+    { name = "pybars4" },
+    { name = "qsharp" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "pybars3", specifier = ">=0.9.7" },
+    { name = "pybars4", specifier = ">=0.9.13" },
+    { name = "qsharp", specifier = ">=1.8.0" },
+]
+
+[[package]]
+name = "pybars3"
+version = "0.9.7"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pymeta3" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ec/1a/2fb847db017f9f89ab8519d96e35fb3dacb6170a0643fddba3b366af0af1/pybars3-0.9.7.tar.gz", hash = "sha256:6ac847e905e53b9c5b936af112c910475e27bf767f79f4528c16f9af1ec0e252", size = 29203 }
+
+[[package]]
+name = "pybars4"
+version = "0.9.13"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pymeta3" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ee/52/9aa428633ef5aba4b096b2b2f8d046ece613cecab28b4ceed54126d25ea5/pybars4-0.9.13.tar.gz", hash = "sha256:425817da20d4ad320bc9b8e77a60cab1bb9d3c677df3dce224925c3310fcd635", size = 29907 }
+
+[[package]]
+name = "pymeta3"
+version = "0.5.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ce/af/409edba35fc597f1e386e3860303791ab5a28d6cc9a8aecbc567051b19a9/PyMeta3-0.5.1.tar.gz", hash = "sha256:18bda326d9a9bbf587bfc0ee0bc96864964d78b067288bcf55d4d98681d05bcb", size = 29566 }
+
+[[package]]
 name = "qsharp"
 version = "1.8.0"
 source = { registry = "https://pypi.org/simple" }
@@ -12,14 +53,3 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/03/0f/0bcfc69b3d066245648b5af05a26d4e05aeb9994160670473431886423d0/qsharp-1.8.0-cp38-abi3-win_amd64.whl", hash = "sha256:bb0ef087b70af4cf5100b8f9229378dde1d11bee985b2d1838bf90a72288a794", size = 2030991 },
     { url = "https://files.pythonhosted.org/packages/8b/82/f265a614217bd7bcffd354778d75344b0804d90a5c93e1bf0e3ba4403076/qsharp-1.8.0-cp38-abi3-win_arm64.whl", hash = "sha256:b2e37cb398ca7786ee7f36b3b602419dc7ff6626cb218416985908f754f683e6", size = 1949587 },
 ]
-
-[[package]]
-name = "what"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "qsharp" },
-]
-
-[package.metadata]
-requires-dist = [{ name = "qsharp", specifier = ">=1.8.0" }]
