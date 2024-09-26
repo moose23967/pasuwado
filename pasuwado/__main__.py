@@ -3,8 +3,8 @@ from typing import Any
 
 from pybars import Compiler
 
-from .generator import Generator
-from .randomizer import Randomizer
+from .random_number_generator import RandomNumberGenerator
+from .random_password_generator import RandomPasswordGenerator
 
 index_template: Any
 styles_content: bytes
@@ -18,14 +18,16 @@ with open("pasuwado/index.hbs") as index_file:
 with open("pasuwado/styles.css") as styles_file:
     styles_content = styles_file.read().encode()
 
-generator = Generator(Randomizer())
+random_password_generator = RandomPasswordGenerator(RandomNumberGenerator())
 
 
 class RequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
 
-        content = index_template({"password": generator.generate(16)}).encode()
+        content = index_template(
+            {"password": random_password_generator.generate(16)}
+        ).encode()
 
         match self.path:
             case "/styles.css":

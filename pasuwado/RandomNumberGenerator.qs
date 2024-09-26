@@ -1,4 +1,4 @@
-namespace Randomizer {
+namespace RandomNumberGenerator {
     import Microsoft.Quantum.Convert.ResultArrayAsInt;
     import Microsoft.Quantum.Math.BitSizeI;
 
