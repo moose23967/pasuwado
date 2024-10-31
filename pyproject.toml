@@ -1,0 +1,12 @@
+[project]
+name = "pasuwado"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "jinja2>=3.1.4",
+    "qsharp>=1.9.0",
+    "starlette>=0.41.2",
+    "uvicorn>=0.32.0",
+]

@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'SF-Mono-Regular';
+    src: url('SF-Mono-Regular.otf');
+}
+
+body {
+    background-color: rgb(229, 229, 234);
+    color: rgb(28, 28, 30);
+    font-size: 22pt;
+    font-family: 'SF-Mono-Regular';
+    text-align: center;
+}
+
+.password {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 30px;
+    border-radius: 15px;
+}
